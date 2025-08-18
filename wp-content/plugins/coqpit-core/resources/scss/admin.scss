@@ -1,0 +1,100 @@
+@import './dashboard/general';
+@import './dashboard/widget';
+@import './settings/users_navigation';
+
+#menu-settings-column .inside:has(> #customlinkdiv){
+  margin: 0;
+}
+
+#customlinkdiv{
+  p{
+    margin-top: 10px;
+
+    &:first-of-type{
+      margin-top: 0;
+    }
+
+    label{
+      width: 100%;
+      margin-top: 0;
+    }
+
+    input[type="text"]{
+      width: 100%;
+      box-sizing: border-box;
+      float: left;
+    }
+
+    &.button-controls{
+
+      span.add-to-menu{
+        float: left;
+
+        span.spinner{
+          float: right;
+        }
+
+        input{
+          float: left;
+        }
+      }
+    }
+  }
+}
+
+#wpadminbar ul li#wp-admin-bar-acf-synchronization{
+  & > a{
+    background-color: #D42C24;
+    color: white;
+    font-weight: 500;
+    line-height: 2.4;
+    border-right: 1px solid #1d2327;
+
+    &:hover{
+      background-color: darken(#D42C24, 10%);
+    }
+  }
+}
+
+#wpadminbar ul li#wp-admin-bar-coqpit-environment{
+  float: right;
+
+  & > div{
+    line-height: 2.4;
+    font-weight: 500;
+  }
+
+  &.preproduction{
+    & > div{
+      background-color: #FCD426;
+      color: darken(#FCD426, 80%);
+    }
+  }
+
+  &.production{
+    & > div{
+      background-color: #67AB2A;
+      color: lighten(#67AB2A, 60%);
+    }
+  }
+
+  &.local{
+    & > div{
+      background-color: #D42C24;
+      color: white;
+    }
+  }
+}
+
+#wpadminbar ul li#wp-admin-bar-coqpit-maintenance > div,
+#wpadminbar ul li#wp-admin-bar-coqpit-maintenance > a{
+    line-height: 2.4;
+    font-weight: 500;
+    background-color: #D42C24;
+    color: white;
+}
+
+body.cant-delete-user .table-view-list.users input[type="checkbox"].administrator,
+body.cant-delete-user .table-view-list.users input[type="checkbox"].administrator + label {
+  display: none;
+}

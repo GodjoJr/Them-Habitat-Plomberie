@@ -1,0 +1,19 @@
+body.comments-disabled{
+  #dashboard_right_now{
+    .comment-count{
+      display: none;
+    }
+  }
+}
+
+#coqpit_dashboard_metabox{
+  .coqpit-dashboard-nothing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(black, .05);
+    min-height: 150px;
+  }
+}

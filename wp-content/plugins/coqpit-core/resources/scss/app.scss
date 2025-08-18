@@ -1,0 +1,25 @@
+@import './fonts/_OceanWide.scss';
+
+body.settings_page_coqpit_core_options{
+  background-color: $background;
+
+  #wpcontent{
+    padding: 0;
+
+    #wpbody-content{
+      margin: 0;
+      padding: 0;
+      min-height: calc(100vh - 32px);
+
+      #coqpit-core-settings{
+        font-family: 'Oceanwide', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  #wpfooter{
+    display: none;
+  }
+}

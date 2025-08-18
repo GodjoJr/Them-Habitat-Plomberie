@@ -1,0 +1,31 @@
+@use '@/tools' as tools;
+
+@mixin responsive($name) {
+
+    @if ($name == smallmobile) {
+        @media only screen and (max-width: tools.$breakpoint-smallmobile) {
+            @content;
+        }
+    } @else if ($name == mobile) {
+        @media only screen and (max-width: tools.$breakpoint-mobile) {
+            @content;
+        }
+    } @else if ($name == largemobile) {
+        @media only screen and (max-width: tools.$breakpoint-largemobile) {
+            @content;
+        }
+    } @else if ($name == tablet) {
+        @media only screen and (max-width: tools.$breakpoint-tablet) {
+            @content;
+        }
+    } @else if ($name == laptop) {
+        @media only screen and (max-width: tools.$breakpoint-laptop) {
+            @content;
+        }
+    } @else if ($name == largecontainer) {
+        @media only screen and (max-width: tools.$breakpoint-largecontainer) {
+            @content;
+        }
+    }
+
+}

@@ -1,0 +1,49 @@
+{
+    "name": "coqpit/core",
+    "description": "a WordPress core abstracter",
+    "type": "project",
+    "config": {
+        "vendor-dir": "lib"
+    },
+    "scripts": {
+        "strauss": [
+            "lib/bin/strauss"
+        ],
+        "post-install-cmd": [
+            "@strauss"
+        ],
+        "post-update-cmd": [
+            "@strauss"
+        ]
+    },
+    "extra": {
+        "strauss": {
+            "target_directory": "vendor",
+            "namespace_prefix": "COQPIT\\Core\\Vendor\\",
+            "classmap_prefix": "COQPIT_Core_Vendor",
+            "constant_prefix": "CCV_",
+            "delete_vendor_packages": false,
+            "delete_vendor_files": false
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "COQPIT\\Plugins\\Core\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "COQPIT"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^10.5",
+        "jenssegers/date": "^4.0",
+        "guzzlehttp/guzzle": "^7.5",
+        "symfony/var-dumper": "^6.2",
+        "rakit/validation": "^1.4"
+    },
+    "require-dev": {
+        "brianhenryie/strauss": "^0.19"
+    }
+}

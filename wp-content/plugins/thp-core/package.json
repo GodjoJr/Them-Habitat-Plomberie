@@ -1,0 +1,23 @@
+{
+  "name": "thp-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node assets/sass-forwards.cjs && npx mix",
+    "watch": "node assets/sass-forwards.cjs && npx mix watch --hot",
+    "prod": "node assets/sass-forwards.cjs && npx mix --production"
+  },
+  "keywords": [],
+  "author": "COQPIT",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "glob-import-loader": "^1.2.0",
+    "laravel-mix": "^6.0.49",
+    "path": "^0.12.7",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.83.0",
+    "sass-loader": "^16.0.4"
+  }
+}

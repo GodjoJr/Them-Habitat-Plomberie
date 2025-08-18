@@ -1,0 +1,42 @@
+{
+    "name": "coqpi/thp-core",
+    "description": "Plugin custom pour le site Therm Habitat Plomberie",
+    "type": "project",
+    "config": {
+        "vendor-dir": "lib"
+    },
+    "scripts": {
+        "strauss": [
+            "lib/bin/strauss"
+        ],
+        "post-install-cmd": [
+            "@strauss"
+        ],
+        "post-update-cmd": [
+            "@strauss"
+        ]
+    },
+    "extra": {
+        "strauss": {
+            "target_directory": "vendor",
+            "namespace_prefix": "COQPIT\\Plugins\\ThpCore\\Vendor\\",
+            "classmap_prefix": "COQPIT_ThpCore_Vendor",
+            "constant_prefix": "CPEV_",
+            "delete_vendor_packages": false,
+            "delete_vendor_files": false
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "COQPIT\\Plugins\\ThpCore\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "COQPIT"
+        }
+    ],
+    "require-dev": {
+        "brianhenryie/strauss": "^0.14"
+    }
+}

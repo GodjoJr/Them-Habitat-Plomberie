@@ -1,0 +1,16 @@
+{
+  "name": "coqpit-core",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "prod": "vite build"
+  },
+  "devDependencies": {
+    "path": "^0.12.7",
+    "sass-embedded": "^1.80.2",
+    "vite": "^5.4.8",
+    "vite-plugin-sass-glob-import": "^4.0.0"
+  }
+}
