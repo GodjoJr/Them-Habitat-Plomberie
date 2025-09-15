@@ -1,2 +1,4 @@
-@use 'layouts/_main.scss';
-@use 'vendors/_reset.scss';
+@use 'elements/_burger.scss' as ElementsBurger;
+@use 'layouts/_header.scss' as LayoutsHeader;
+@use 'layouts/_main.scss' as LayoutsMain;
+@use 'vendors/_reset.scss' as VendorsReset;

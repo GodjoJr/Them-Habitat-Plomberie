@@ -1,5 +1,5 @@
-@use '@/tools' as tools;
-@use '@/mixins' as mixins;
+@use '@/tools' as *;
+@use '@/mixins' as *;
 
 html,
 body {
@@ -10,58 +10,49 @@ body {
 }
 
 body {
-    width: 100vw;
-    background-color: tools.$primary;
+    width: 100%;
+    background-color: $white;
     height: auto;
     min-height: 100vh;
     float: left;
     position: relative;
-    font-family: tools.$Montserrat;
-    font-weight: tools.$fontRegular;
-    font-size: mixins.px2rem(14);
-    line-height: mixins.px2rem(24);
-    color: mixins.color(var(--color-text));
+    font-family: $Montserrat;
+    font-weight: $fontRegular;
+    font-size: px2rem(14);
+    line-height: px2rem(20);
+    color: $text;
     margin: 0;
 
     * {
         min-width: 0;
-    }
-}
-
-.container {
-    max-width: tools.$containerSize;
-    margin: 0 auto;
-    clear: both;
-    float: initial;
-
-    @media screen and (max-width: tools.$containerSize) {
-        padding: 0 20px;
+        box-sizing: border-box;
     }
 
-    .container {
-        @media screen and (max-width: tools.$containerSize) {
-            padding: 0;
-        }
-    }
-}
+    ul {
+        padding: 0;
+        margin: 0;
 
-.large-container {
-    max-width: tools.$largeContainerSize;
-    margin: 0 auto;
-    clear: both;
-    float: initial;
-
-    @media screen and (max-width: tools.$largeContainerSize) {
-        padding: 0 20px;
-    }
-
-    .container {
-        @media screen and (max-width: tools.$largeContainerSize) {
-            padding: 0;
+        li {
+            list-style: none;
         }
     }
 }
 
 svg * {
     transform-box: fill-box;
+}
+
+.container {
+    width: 100%;
+    max-width: $container;
+    margin: 0 auto;
+}
+
+.image-container {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
 }

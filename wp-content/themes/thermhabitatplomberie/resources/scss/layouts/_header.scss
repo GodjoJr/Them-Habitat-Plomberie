@@ -1,0 +1,221 @@
+@use '@/tools' as *;
+@use '@/mixins' as *;
+
+#header-site {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    padding: 30px 0 10px;
+    background-color: red;
+
+    &:not(.opened) {
+        width: 100%;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            @include responsive(desktop) {
+                padding: 0 30px;
+            }
+
+            .logo-container {
+                width: max-content;
+                height: 50px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .main-navigation {
+                ul.main-menu {
+                    display: flex;
+                    justify-content: flex-end;
+                    flex-wrap: wrap;
+
+                    @include responsive(tablet) {
+                        display: none;
+                    }
+
+                    li {
+                        position: relative;
+
+                        &.menu-item-has-children {
+                            a::after {
+                                content: url('../svg/arrow-down.svg');
+                                display: inline-block;
+                                margin-left: 6px;
+                            }
+                        }
+
+                        &.cta a {
+                            border-radius: 100px;
+                            background: $primary;
+                            border: solid 1px $primary;
+
+                            &:hover {
+                                color: $primary;
+                                text-decoration: none;
+                                background-color: $white;
+                            }
+                        }
+
+                        &:not(.cta).current-menu-item>a {
+                            text-decoration: underline solid 2px;
+                            text-underline-offset: 5px;
+                        }
+
+                        a {
+                            display: block;
+                            padding: 14px 22px;
+                            color: $white;
+                            font-family: $Montserrat;
+                            font-size: px2rem(13);
+                            font-weight: $fontBold;
+                            line-height: 12px;
+                            text-align: center;
+
+                            &:hover {
+                                text-decoration: underline solid 2px;
+                                text-underline-offset: 5px;
+                            }
+                        }
+
+
+                        ul.sub-menu {
+                            position: absolute;
+                            top: 100%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: max-content;
+                            background-color: $white;
+                            border-radius: 10px;
+                            padding: 5px 0 10px;
+                            display: none;
+
+                            li {
+                                a {
+                                    display: block;
+                                    padding: 10px 22px;
+                                    color: $text;
+                                    font-family: $Montserrat;
+                                    font-size: px2rem(13);
+                                    font-weight: $fontBold;
+                                    line-height: 12px;
+
+                                }
+
+                                &:hover {
+                                    a {
+                                        color: $primary;
+                                    }
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            ul.sub-menu {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .burger {
+                display: none;
+
+                @include responsive(tablet) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &.opened {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100vh;
+        z-index: 999;
+        background-color: $primary;
+
+        @include responsive(mobile) {
+            width: 100%;
+        }
+
+        .container {
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .logo-container {
+                width: max-content;
+                height: 50px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .main-navigation {
+                ul.main-menu {
+                    display: flex;
+                    flex-direction: column;
+
+                    li {
+                        &.menu-item-has-children {
+                            &>a::after {
+                                content: url('../svg/arrow-down.svg');
+                                display: inline-block;
+                                margin-left: 6px;
+                            }
+                        }
+
+                        a {
+                            display: block;
+                            padding: 14px 22px;
+                            color: $white;
+                            font-family: $Montserrat;
+                            font-size: px2rem(13);
+                            font-weight: $fontBold;
+                            line-height: 12px;
+
+                            &:hover {
+                                text-decoration: underline solid 2px;
+                                text-underline-offset: 5px;
+                            }
+                        }
+
+                        ul.sub-menu {
+                            display: none;
+                            margin-left: 25px;
+                        }
+                    }
+                }
+            }
+
+
+            .burger {
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                z-index: 9999;
+            }
+        }
+    }
+
+
+
+
+}

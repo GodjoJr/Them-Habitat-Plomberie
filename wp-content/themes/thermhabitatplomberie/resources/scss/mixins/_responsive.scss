@@ -22,8 +22,8 @@
         @media only screen and (max-width: tools.$breakpoint-laptop) {
             @content;
         }
-    } @else if ($name == largecontainer) {
-        @media only screen and (max-width: tools.$breakpoint-largecontainer) {
+    } @else if ($name == desktop) {
+        @media only screen and (max-width: tools.$breakpoint-desktop) {
             @content;
         }
     }

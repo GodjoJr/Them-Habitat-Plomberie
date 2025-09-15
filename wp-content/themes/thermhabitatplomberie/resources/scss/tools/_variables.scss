@@ -1,13 +1,18 @@
 // Main sizes
-$containerSize: 1240px;
-$largeContainerSize: 1440px;
+$smallContainer: 1240px;
+$container: 1440px;
 
 // Fonts
 $Montserrat: 'Montserrat', 'sans-serif';
 
 // Colors
-$primary: #849cf4;
-$secondary: #fdffa1;
+$primary: #0049AF;
+$secondary: #F4F4F4;
+
+$white: #fff;
+$black: #000;
+
+$text: rgba(0, 0, 0, 0.8);
 
 // Font Weights
 $fontThin: 100;
