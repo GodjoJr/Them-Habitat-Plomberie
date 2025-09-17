@@ -1,0 +1,56 @@
+@use '@/tools' as tools;
+@use '@/mixins' as mixins;
+
+.text-container {
+
+    *:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: mixins.px2rem(14);
+        line-height: mixins.px2rem(24);
+    }
+
+    strong {
+        font-weight: tools.$fontBold;
+    }
+
+    small {
+        font-size: mixins.px2rem(12);
+        line-height: normal;
+    }
+
+
+    a:not(.btn) {
+        color: mixins.color(var(--color-text));
+        font-weight: tools.$fontSemiBold;
+        text-decoration: underline solid 2px;
+    }
+
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            position: relative;
+            padding-left: 30px;
+            font-size: mixins.px2rem(14);
+            line-height: mixins.px2rem(20);
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 8px;
+                top: 6px;
+                width: 9px;
+                height: 9px;
+                background-image: url('../svg/list-style.svg');
+                background-position: center center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

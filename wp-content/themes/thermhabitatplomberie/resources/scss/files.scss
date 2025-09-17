@@ -1,4 +1,7 @@
+@use 'banners/homepage-banner.scss' as BannersHomepageBanner;
 @use 'elements/_burger.scss' as ElementsBurger;
+@use 'elements/_text-container.scss' as ElementsTextContainer;
+@use 'elements/_title.scss' as ElementsTitle;
 @use 'layouts/_header.scss' as LayoutsHeader;
 @use 'layouts/_main.scss' as LayoutsMain;
 @use 'vendors/_reset.scss' as VendorsReset;
