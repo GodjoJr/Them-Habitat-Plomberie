@@ -8,3 +8,36 @@ h1 {
     font-weight: 600;
     line-height: normal;
 }
+
+h2 {
+    font-family: $Roboto;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    @include responsive(mobile) {
+        font-size: 40px;
+    }
+}
+
+h3 {
+    font-family: $Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.overtitle {
+    color: $secondary;
+    font-family: $Roboto;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    @include responsive(mobile) {
+        font-size: 25px;
+    }
+}

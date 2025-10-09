@@ -1,0 +1,54 @@
+@use '@/tools' as *;
+@use '@/mixins' as *;
+
+.btn {
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 15px 7px 7px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    .icon {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $primary;
+        color: $white;
+        transition: all 0.3s ease-in-out;
+
+        svg {
+            width: 5px;
+            height: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &.btn-primary {
+        border: solid 1px $primary;
+        color: $primary;
+
+        &:hover {
+            border: solid 1px $white;
+            background-color: $primary;
+            color: $white;
+
+            .icon {
+                background-color: $white;
+                color: $primary;
+            }
+        }
+    }
+}

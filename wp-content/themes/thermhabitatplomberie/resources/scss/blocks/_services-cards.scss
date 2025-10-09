@@ -1,0 +1,47 @@
+@use '@/tools' as *;
+@use '@/mixins' as *;
+
+.block-services-cards {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        .overtitle {
+            text-align: center;
+            color: $secondary;
+            font-family: $Roboto;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        h2 {
+            color: $primary;
+            text-align: center;
+            max-width: 1000px;
+        }
+
+        .cards {
+            margin-top: 60px;
+            width: $smallContainer;
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+
+            @include responsive(tablet) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+            @include responsive(largemobile) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+
+}

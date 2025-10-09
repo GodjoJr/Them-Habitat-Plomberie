@@ -1,0 +1,172 @@
+@use '@/tools' as *;
+@use '@/mixins' as *;
+
+#footer-site {
+    background-color: $primary;
+
+    .container {
+
+        .top-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+
+            .left-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+
+                .logo-container {
+                    width: 326px;
+                    height: 326px;
+                }
+
+                .socials {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 30px;
+
+                    .social {
+                        width: 50px;
+                        height: 50px;
+                        flex-shrink: 0;
+                        background-color: $white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+
+                        svg {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+
+            .right-container {
+                display: flex;
+                gap: 105px;
+
+                .footer-navigation {
+                    ul.main-menu {
+
+                        li {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 15px;
+
+                            a {
+                                display: block;
+                                color: $white;
+                                font-family: $Roboto;
+                                font-size: 20px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal;
+                            }
+
+                            ul.sub-menu {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 15px;
+
+                                li {
+                                    a {
+                                        color: rgba($white, 0.6);
+                                        // font-family: $DMSans;
+                                        font-size: 16px;
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        line-height: normal;
+                                        letter-spacing: 0.48px;
+
+                                        &:hover {
+                                            color: $white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .infos {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    p.title {
+                        display: block;
+                        color: $white;
+                        font-family: $Roboto;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                    }
+
+                    a,
+                    p {
+                        color: rgba($white, 0.6);
+                        // font-family: $DMSans;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 0.48px;
+                    }
+
+                    a:hover {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .bottom-container {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba($white, 0.2);
+
+            .credits {
+                color: rgba($white, 0.6);
+                font-family: $Roboto;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+
+                a {
+                    color: $white;
+                }
+            }
+
+            .legal-navigation {
+                ul.main-menu {
+                    display: flex;
+                    gap: 30px;
+
+                    li {
+                        a {
+                            color: rgba($white, 0.6);
+                            font-family: $Roboto;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+
+                            &:hover {
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
