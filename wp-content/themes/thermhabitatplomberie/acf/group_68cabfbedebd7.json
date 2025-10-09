@@ -431,7 +431,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "layout": "table",
+                            "layout": "block",
                             "min": 1,
                             "max": 4,
                             "collapsed": "",
@@ -490,7 +490,7 @@
                                 {
                                     "key": "field_68e7ac0ad5c18",
                                     "label": "Texte",
-                                    "name": "texte",
+                                    "name": "text",
                                     "aria-label": "",
                                     "type": "textarea",
                                     "instructions": "",
@@ -506,7 +506,7 @@
                                     "allow_in_bindings": 0,
                                     "rows": 2,
                                     "placeholder": "",
-                                    "new_lines": "",
+                                    "new_lines": "wpautop",
                                     "parent_repeater": "field_68e7abd9d5c15"
                                 }
                             ]
@@ -561,5 +561,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1760013397
+    "modified": 1760014612
 }
